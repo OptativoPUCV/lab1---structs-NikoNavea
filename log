@@ -34,3 +34,17 @@ exercises.c:18:7: error: expected expression before ‘=’ token
 cc1: all warnings being treated as errors
 Compilation failed
 bec89d3
+Thu 16 Mar 2023 09:13:50 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘swap’:
+exercises.c:18:3: error: statement with no effect [-Werror=unused-value]
+   18 |   b; = pivote
+      |   ^
+exercises.c:18:6: error: expected expression before ‘=’ token
+   18 |   b; = pivote
+      |      ^
+cc1: all warnings being treated as errors
+Compilation failed
+faf3831
