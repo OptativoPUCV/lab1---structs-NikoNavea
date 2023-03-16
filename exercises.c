@@ -16,7 +16,6 @@ void swap(int *a, int *b) {
   int pivote = *a;
   *a = *b;
   *b = pivote;
-
 }
 
 /*
@@ -26,6 +25,7 @@ la cual encuentra el máximo y el mínimo valor del arreglo a y los
 almacena en las variables apuntadas por max y min.
 */
 void arrayMaxMin(int *a, int n, int *max, int *min) {
+  
     
 }
 
@@ -75,7 +75,7 @@ Programe la función void asignarValor(Vector * v, int i, int valor),
 la cual asigna el valor a la posición i del vector v.
 */
 void asignarValor(Vector * v, int i, int valor) {
-
+  *v[i] = valor;
 }
 
 /*
@@ -93,7 +93,7 @@ Función que suma los vectores `a` y `b` y
 actualiza el vector `c` con el resultado de la suma.
 */
 void sumaV(Vector * a, Vector * b, Vector * c) {
-
+  
 }
 
 /*
