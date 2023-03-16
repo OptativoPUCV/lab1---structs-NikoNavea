@@ -117,3 +117,35 @@ Thu 16 Mar 2023 09:32:36 PM UTC:
  tests:  2|5
 total_score: 20/70
 5e1d5e5
+Thu 16 Mar 2023 09:36:47 PM UTC: 
+ exercises.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:60:12: error: returning ‘int’ from a function with return type ‘Persona *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   60 |     return EXIT_FAILURE;
+      |            ^~~~~~~~~~~~
+exercises.c:62:11: error: format ‘%c’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[30]’ [-Werror=format=]
+   62 |   scanf("%c", &p->nombre);
+      |          ~^   ~~~~~~~~~~
+      |           |   |
+      |           |   char (*)[30]
+      |           char *
+exercises.c:63:11: error: format ‘%c’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[11]’ [-Werror=format=]
+   63 |   scanf("%c", &p->rut);
+      |          ~^   ~~~~~~~
+      |           |   |
+      |           |   char (*)[11]
+      |           char *
+exercises.c:62:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   62 |   scanf("%c", &p->nombre);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+exercises.c:63:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   63 |   scanf("%c", &p->rut);
+      |   ^~~~~~~~~~~~~~~~~~~~
+exercises.c:64:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   64 |   scanf("%i", &p->edad);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ed27d43
