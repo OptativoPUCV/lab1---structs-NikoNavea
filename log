@@ -548,3 +548,18 @@ exercises.c:108:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 bdb5d6d
+Fri 17 Mar 2023 04:30:35 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearVector’:
+exercises.c:87:10: error: expected identifier before ‘*’ token
+   87 |   array->*datos = (int*) calloc(n, sizeof(int));
+      |          ^
+exercises.c: In function ‘obtenerValor’:
+exercises.c:108:1: error: control reaches end of non-void function [-Werror=return-type]
+  108 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+d838d8d
