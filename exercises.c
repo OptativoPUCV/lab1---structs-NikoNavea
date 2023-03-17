@@ -132,5 +132,5 @@ void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
   int k = 0;
   int suma;
   suma = (a1+a2) + (b1+b2);
-  c->datos[k] = suma;
+  c->datos[k-1] = suma;
 }
