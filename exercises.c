@@ -59,8 +59,8 @@ Persona* crearPersona(char nombre[], char rut[], int edad) {
   if(p == NULL) {
     return EXIT_FAILURE;
   }
-  strcopy(p->nombre, nombre);
-  strcopy(p->rut, rut);
+  strcpy(p->nombre, nombre);
+  strcpy(p->rut, rut);
   p->edad = edad;
   
   return p;

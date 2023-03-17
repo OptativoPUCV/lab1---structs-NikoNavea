@@ -290,3 +290,14 @@ exercises.c:62:3: error: implicit declaration of function ‘strcopy’; did you
 cc1: all warnings being treated as errors
 Compilation failed
 0e933f2
+Fri 17 Mar 2023 03:59:54 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:60:12: error: returning ‘int’ from a function with return type ‘Persona *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   60 |     return EXIT_FAILURE;
+      |            ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6e40f0d
