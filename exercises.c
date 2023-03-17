@@ -85,7 +85,7 @@ Vector* crearVector(int n) {
     exit(EXIT_FAILURE);
   }
   array->datos = calloc(n, sizeof(int));
-  vector->capacidad = n;
+  array->capacidad = n;
   return array;
 }
 
