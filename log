@@ -223,3 +223,26 @@ exercises.c:63:10: error: assignment to expression with array type
 cc1: all warnings being treated as errors
 Compilation failed
 d541d2d
+Fri 17 Mar 2023 03:56:35 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:60:12: error: returning ‘int’ from a function with return type ‘Persona *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   60 |     return EXIT_FAILURE;
+      |            ^~~~~~~~~~~~
+exercises.c:62:12: error: array subscript 30 is above array bounds of ‘char[30]’ [-Werror=array-bounds]
+   62 |   p->nombre[30] = nombre[30];
+      |   ~~~~~~~~~^~~~
+exercises.c:50:8: note: while referencing ‘nombre’
+   50 |   char nombre[30];
+      |        ^~~~~~
+exercises.c:63:9: error: array subscript 11 is above array bounds of ‘char[11]’ [-Werror=array-bounds]
+   63 |   p->rut[11] = rut[11];
+      |   ~~~~~~^~~~
+exercises.c:51:8: note: while referencing ‘rut’
+   51 |   char rut[11];
+      |        ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+aa53b3a
