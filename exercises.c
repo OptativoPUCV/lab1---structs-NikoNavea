@@ -103,7 +103,8 @@ Programe la función int obtenerValor(Vector * v, int i),
 la cual retorna el valor en la posición i del vector v.
 */
 int obtenerValor(Vector * v, int i) {
-   return 0;
+  int temp = vector[i]
+  return temp;
 }
 
 /*
@@ -112,7 +113,11 @@ Función que suma los vectores `a` y `b` y
 actualiza el vector `c` con el resultado de la suma.
 */
 void sumaV(Vector * a, Vector * b, Vector * c) {
-  
+  int longitud = sizeof(a)/sizeof(a[0]);
+  for(int k = 0; k < longitud ; k++) {
+    int suma = a[k] + b[k];
+    c[k] = suma
+  }
 }
 
 /*
