@@ -59,9 +59,9 @@ Persona* crearPersona(char nombre[], char rut[], int edad) {
   if(p == NULL) {
     return EXIT_FAILURE;
   }
-  gets(&p->nombre);
-  gets(&p->rut);
-  scanf("%i", &p->edad);
+  p->nombre = nombre[];
+  p->rut = rut[];
+  p->edad = edad;
   
   return p;
 }
