@@ -649,3 +649,18 @@ Fri 17 Mar 2023 02:13:57 PM UTC:
  tests:  6|2
 total_score: 50/70
 444dd8b
+Fri 17 Mar 2023 02:17:14 PM UTC: 
+ exercises.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaV’:
+exercises.c:120:17: error: invalid operands to binary + (have ‘Vector’ and ‘Vector’)
+  120 |     suma = a[k] + b[k];
+      |            ~~~~ ^ ~~~~
+      |             |      |
+      |             Vector Vector
+exercises.c:121:12: error: incompatible types when assigning to type ‘Vector’ from type ‘int’
+  121 |     c[k] = suma;
+      |            ^~~~
+Compilation failed
+3754d81
