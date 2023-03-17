@@ -184,3 +184,25 @@ exercises.c:63:16: error: expected expression before ‘]’ token
 cc1: all warnings being treated as errors
 Compilation failed
 69324d4
+Fri 17 Mar 2023 03:55:41 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:59:9: error: invalid operands to binary == (have ‘Persona’ and ‘void *’)
+   59 |   if(*p == NULL) {
+      |      ~~ ^~
+      |      |
+      |      Persona
+exercises.c:60:12: error: returning ‘int’ from a function with return type ‘Persona *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   60 |     return EXIT_FAILURE;
+      |            ^~~~~~~~~~~~
+exercises.c:62:22: error: expected expression before ‘]’ token
+   62 |   p->nombre = nombre[];
+      |                      ^
+exercises.c:63:16: error: expected expression before ‘]’ token
+   63 |   p->rut = rut[];
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+fe817b3
