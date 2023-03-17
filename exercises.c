@@ -116,7 +116,7 @@ void sumaV(Vector * a, Vector * b, Vector * c) {
   int longitud = sizeof(a)/sizeof(a[0]);
   for(int k = 0; k < longitud ; k++) {
     int suma = a[k] + b[k];
-    c[k] = suma
+    c[k] = suma;
   }
 }
 
