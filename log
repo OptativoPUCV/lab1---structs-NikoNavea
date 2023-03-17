@@ -275,3 +275,18 @@ exercises.c:51:8: note: while referencing ‘rut’
 cc1: all warnings being treated as errors
 Compilation failed
 e85cb3a
+Fri 17 Mar 2023 03:59:44 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:60:12: error: returning ‘int’ from a function with return type ‘Persona *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   60 |     return EXIT_FAILURE;
+      |            ^~~~~~~~~~~~
+exercises.c:62:3: error: implicit declaration of function ‘strcopy’; did you mean ‘strcpy’? [-Werror=implicit-function-declaration]
+   62 |   strcopy(p->nombre, nombre);
+      |   ^~~~~~~
+      |   strcpy
+cc1: all warnings being treated as errors
+Compilation failed
+0e933f2
