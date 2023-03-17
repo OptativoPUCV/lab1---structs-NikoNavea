@@ -80,7 +80,7 @@ typedef struct {
 } Vector;
 
 Vector* crearVector(int n) {
-  Vector *array = (Vector *) malloc(sizeof(Vector) * n);
+  Vector *array = (Vector *) calloc(sizeof(Vector) * n);
   if (array == NULL) {
     exit(EXIT_FAILURE);
   }
