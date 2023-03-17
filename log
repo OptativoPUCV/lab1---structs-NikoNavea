@@ -477,3 +477,35 @@ exercises.c:106:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 c51967f
+Fri 17 Mar 2023 04:23:59 AM UTC: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearVector’:
+exercises.c:88:3: error: ‘vector’ undeclared (first use in this function); did you mean ‘Vector’?
+   88 |   vector->capacidad = n;
+      |   ^~~~~~
+      |   Vector
+exercises.c:88:3: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c: In function ‘sumaV’:
+exercises.c:115:27: error: division ‘sizeof (Vector *) / sizeof (Vector)’ does not compute the number of array elements [-Werror=sizeof-pointer-div]
+  115 |   int longitud = sizeof(a)/sizeof(a[0]);
+      |                           ^
+exercises.c:114:20: note: first ‘sizeof’ operand was declared here
+  114 | void sumaV(Vector *a, Vector *b, Vector *c) {
+      |            ~~~~~~~~^
+exercises.c:117:21: error: invalid operands to binary + (have ‘Vector’ and ‘Vector’)
+  117 |     int suma = a[k] + b[k];
+      |                ~~~~ ^ ~~~~
+      |                 |      |
+      |                 Vector Vector
+exercises.c:118:12: error: incompatible types when assigning to type ‘Vector’ from type ‘int’
+  118 |     c[k] = suma;
+      |            ^~~~
+exercises.c: In function ‘obtenerValor’:
+exercises.c:107:1: error: control reaches end of non-void function [-Werror=return-type]
+  107 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+5c8bdba

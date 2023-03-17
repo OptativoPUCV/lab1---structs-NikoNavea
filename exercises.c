@@ -80,11 +80,12 @@ typedef struct {
 } Vector;
 
 Vector* crearVector(int n) {
-  Vector *array = (Vector *) calloc(n, sizeof(Vector));
+  Vector *array = (Vector *) malloc(sizeof(Vector));
   if (array == NULL) {
     exit(EXIT_FAILURE);
   }
-  
+  array->datos = calloc(n, sizeof(int));
+  vector->capacidad = n;
   return array;
 }
 
@@ -93,7 +94,7 @@ Ejercicio 5a.
 Programe la función void asignarValor(Vector * v, int i, int valor), 
 la cual asigna el valor a la posición i del vector v.
 */
-void asignarValor(Vector * v, int i, int valor) {
+void asignarValor(Vector *v, int i, int valor) {
   
 }
 
@@ -102,7 +103,7 @@ Ejercicio 6.
 Programe la función int obtenerValor(Vector * v, int i), 
 la cual retorna el valor en la posición i del vector v.
 */
-int obtenerValor(Vector * v, int i) {
+int obtenerValor(Vector *v, int i) {
 }
 
 /*
@@ -110,7 +111,7 @@ Ejercicio 7.
 Función que suma los vectores `a` y `b` y 
 actualiza el vector `c` con el resultado de la suma.
 */
-void sumaV(Vector * a, Vector * b, Vector * c) {
+void sumaV(Vector *a, Vector *b, Vector *c) {
   int longitud = sizeof(a)/sizeof(a[0]);
   for(int k = 0; k < longitud ; k++) {
     int suma = a[k] + b[k];
