@@ -415,3 +415,39 @@ exercises.c:108:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 0effac2
+Fri 17 Mar 2023 04:18:24 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘obtenerValor’:
+exercises.c:106:14: error: incompatible types when initializing type ‘int’ using type ‘Vector’
+  106 |   int temp = v[i]
+      |              ^
+exercises.c:107:3: error: expected ‘,’ or ‘;’ before ‘return’
+  107 |   return temp;
+      |   ^~~~~~
+exercises.c:106:7: error: unused variable ‘temp’ [-Werror=unused-variable]
+  106 |   int temp = v[i]
+      |       ^~~~
+exercises.c: In function ‘sumaV’:
+exercises.c:116:27: error: division ‘sizeof (Vector *) / sizeof (Vector)’ does not compute the number of array elements [-Werror=sizeof-pointer-div]
+  116 |   int longitud = sizeof(a)/sizeof(a[0]);
+      |                           ^
+exercises.c:115:21: note: first ‘sizeof’ operand was declared here
+  115 | void sumaV(Vector * a, Vector * b, Vector * c) {
+      |            ~~~~~~~~~^
+exercises.c:118:21: error: invalid operands to binary + (have ‘Vector’ and ‘Vector’)
+  118 |     int suma = a[k] + b[k];
+      |                ~~~~ ^ ~~~~
+      |                 |      |
+      |                 Vector Vector
+exercises.c:119:12: error: incompatible types when assigning to type ‘Vector’ from type ‘int’
+  119 |     c[k] = suma;
+      |            ^~~~
+exercises.c: In function ‘obtenerValor’:
+exercises.c:108:1: error: control reaches end of non-void function [-Werror=return-type]
+  108 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+403684f

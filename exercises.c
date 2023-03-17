@@ -103,7 +103,7 @@ Programe la función int obtenerValor(Vector * v, int i),
 la cual retorna el valor en la posición i del vector v.
 */
 int obtenerValor(Vector * v, int i) {
-  int temp = vector[i]
+  int temp = v[i]
   return temp;
 }
 
